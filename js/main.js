@@ -30,6 +30,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // Close on drawer nav link click
   drawer?.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDrawer));
 
+  /* ---- Popup notice dismiss ---- */
+  const popupNotice = document.getElementById('popupNotice');
+  document.getElementById('popupNoticeClose')?.addEventListener('click', () => {
+    popupNotice?.classList.add('hidden');
+  });
+
   /* ---- Scroll-to-top button ---- */
   const scrollBtn = document.getElementById('scrollTop');
   window.addEventListener('scroll', () => {

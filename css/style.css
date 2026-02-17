@@ -591,6 +591,42 @@ img, svg { display: block; }
 .service-arrow svg { width: 14px; height: 14px; }
 
 /* =============================================
+   POPUP NOTICE BANNER
+   ============================================= */
+.popup-notice {
+  background: #fffbeb;
+  border-bottom: 1px solid #fde68a;
+}
+.popup-notice.hidden { display: none; }
+.popup-notice-inner {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+}
+.popup-notice-icon {
+  flex-shrink: 0;
+  color: #b45309;
+}
+.popup-notice p {
+  flex: 1;
+  font-size: 0.875rem;
+  color: #78350f;
+  line-height: 1.5;
+}
+.popup-notice-close {
+  flex-shrink: 0;
+  color: #92400e;
+  opacity: 0.55;
+  padding: 0.25rem;
+  line-height: 0;
+  border-radius: var(--r-sm);
+  transition: opacity 0.15s;
+}
+.popup-notice-close:hover { opacity: 1; }
+
+/* =============================================
    FEATURES SECTION
    ============================================= */
 .features-section {

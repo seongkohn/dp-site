@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="css/style.css?v=20260217c" />
+  <link rel="stylesheet" href="css/style.css?v=20260217d" />
 </head>
 <body>
 
@@ -29,8 +29,8 @@
 
     <!-- Desktop Navigation -->
     <nav class="site-nav" aria-label="Main navigation">
-      <a href="#greeting">인사말</a>
       <a href="#how-to-use">사용방법</a>
+      <a href="#greeting">인사말</a>
       <a href="https://seongkohn.com" target="_blank" rel="noopener noreferrer">회사소개</a>
     </nav>
 
@@ -70,8 +70,8 @@
       </button>
     </div>
     <nav class="drawer-nav">
-      <a href="#greeting">인사말</a>
       <a href="#how-to-use">사용방법</a>
+      <a href="#greeting">인사말</a>
       <a href="https://seongkohn.com" target="_blank" rel="noopener noreferrer">회사소개</a>
       <a href="http://d.digitalpathology.co.kr/Login/Index?ReturnUrl=%2f" target="_blank" rel="noopener noreferrer" class="drawer-login">Login</a>
     </nav>
@@ -112,6 +112,25 @@
     </div>
   </div>
 </section>
+
+<!-- =============================================
+     MOBILE POPUP NOTICE
+     ============================================= -->
+<div class="popup-notice" id="popupNotice" role="alert">
+  <div class="container popup-notice-inner">
+    <svg class="popup-notice-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="18" height="18">
+      <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+      <line x1="12" y1="18" x2="12.01" y2="18"/>
+    </svg>
+    <p>휴대폰에서 WSI를 보려면 팝업 창을 허용해 주세요.</p>
+    <button class="popup-notice-close" id="popupNoticeClose" aria-label="알림 닫기">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true">
+        <line x1="18" y1="6" x2="6" y2="18"/>
+        <line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+  </div>
+</div>
 
 <!-- =============================================
      SERVICES (WSI PLATFORMS)
@@ -307,30 +326,6 @@
         <p class="feature-desc">학회 공개 집담회부터 기관 내 비공개까지 두 가지 방식으로 운영합니다.</p>
       </div>
 
-    </div>
-  </div>
-</section>
-
-<!-- =============================================
-     GREETING / 인사말
-     ============================================= -->
-<section class="greeting-section" id="greeting">
-  <div class="container">
-    <div class="greeting-inner">
-      <span class="section-badge">인사말</span>
-      <h2 class="section-heading">인사말</h2>
-      <div class="greeting-card">
-        <div class="greeting-paragraphs">
-          <p>설레이는 마음으로 디지털 슬라이드 호스팅을 시작하지 어느덧 12년이 지났습니다.</p>
-          <p>완벽한 시스템은 아니었지만 그동안 유용하게 사용되었고 또 디지털병리를 경험하고 확산시키는데 일익을 담당하였다고 생각합니다. 그사이 IT 기술도 진화하여 저희 프로그램의 기반이었던 Adobe Flash Player 도 역사속으로 사라지는가 하면, 국내에서도 호스팅 프로그램을 개발할 수 있는 수준으로 디지털 병리가 성장하였습니다.</p>
-          <p>새 플랫폼은 진정한 '통합뷰어' '웹뷰어' 이면서 컴퓨터, 노트북, 휴대폰, 태블릿 (Android &amp; iOS)등 모든 스마트 통신기기에서 이용할 수 있도록 개발하였습니다. 또한 새로 구축한 서버는 전용망에 직접 연결하여 속도와 동시접속시 발생하던 문제점들을 해결하였습니다.</p>
-          <p>앞으로도 이 사이트가 기술적 진보를 거듭하여 우리나라 디지털 병리의 보급과 발전에 일익을 담당할 수 있도록 노력하겠습니다.</p>
-          <div class="greeting-sign">
-            <p>2021. 1. 1&nbsp;&nbsp;성곤무역주식회사</p>
-            <p>사장/대표이사&nbsp;&nbsp;윤 무 열&nbsp;&nbsp;올림</p>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -612,6 +607,30 @@
       </div>
     </div>
 
+  </div>
+</section>
+
+<!-- =============================================
+     GREETING / 인사말
+     ============================================= -->
+<section class="greeting-section" id="greeting">
+  <div class="container">
+    <div class="greeting-inner">
+      <span class="section-badge">인사말</span>
+      <h2 class="section-heading">인사말</h2>
+      <div class="greeting-card">
+        <div class="greeting-paragraphs">
+          <p>설레이는 마음으로 디지털 슬라이드 호스팅을 시작하지 어느덧 12년이 지났습니다.</p>
+          <p>완벽한 시스템은 아니었지만 그동안 유용하게 사용되었고 또 디지털병리를 경험하고 확산시키는데 일익을 담당하였다고 생각합니다. 그사이 IT 기술도 진화하여 저희 프로그램의 기반이었던 Adobe Flash Player 도 역사속으로 사라지는가 하면, 국내에서도 호스팅 프로그램을 개발할 수 있는 수준으로 디지털 병리가 성장하였습니다.</p>
+          <p>새 플랫폼은 진정한 '통합뷰어' '웹뷰어' 이면서 컴퓨터, 노트북, 휴대폰, 태블릿 (Android &amp; iOS)등 모든 스마트 통신기기에서 이용할 수 있도록 개발하였습니다. 또한 새로 구축한 서버는 전용망에 직접 연결하여 속도와 동시접속시 발생하던 문제점들을 해결하였습니다.</p>
+          <p>앞으로도 이 사이트가 기술적 진보를 거듭하여 우리나라 디지털 병리의 보급과 발전에 일익을 담당할 수 있도록 노력하겠습니다.</p>
+          <div class="greeting-sign">
+            <p>2021. 1. 1&nbsp;&nbsp;성곤무역주식회사</p>
+            <p>대표이사&nbsp;&nbsp;윤 무 열&nbsp;&nbsp;올림</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
