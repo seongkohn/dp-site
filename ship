@@ -1,0 +1,63 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+CONFIG_FILE=".ship.env"
+
+if [[ $# -lt 1 ]]; then
+  echo "Usage: ./ship \"your commit message\""
+  exit 1
+fi
+
+COMMIT_MESSAGE="$*"
+
+if ! git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
+  echo "Error: run this from inside your git project."
+  exit 1
+fi
+
+if [[ ! -f "${CONFIG_FILE}" ]]; then
+  echo "Error: missing ${CONFIG_FILE}"
+  echo "Create it from .ship.env.example and set SHIP_REMOTE_HOST."
+  exit 1
+fi
+
+# shellcheck disable=SC1090
+source "${CONFIG_FILE}"
+
+REMOTE_HOST="${SHIP_REMOTE_HOST:-}"
+REMOTE_REPO_DIR="${SHIP_REMOTE_REPO_DIR:-/var/www/dp-site-repo}"
+BRANCH="${SHIP_BRANCH:-main}"
+REMOTE_REPO_URL="${SHIP_REMOTE_REPO_URL:-$(git remote get-url origin)}"
+
+if [[ -z "${REMOTE_HOST}" ]]; then
+  echo "Error: SHIP_REMOTE_HOST is empty in ${CONFIG_FILE}"
+  exit 1
+fi
+
+if [[ -z "$(git status --porcelain)" ]]; then
+  echo "No local changes to deploy."
+  exit 0
+fi
+
+echo "==> Staging changes..."
+git add -A
+
+echo "==> Committing..."
+git commit -m "${COMMIT_MESSAGE}"
+
+echo "==> Pushing to GitHub (${BRANCH})..."
+git push origin "${BRANCH}"
+
+echo "==> Deploying on server (${REMOTE_HOST})..."
+ssh "${REMOTE_HOST}" "set -e; \
+  mkdir -p '${REMOTE_REPO_DIR}' '/var/www/dp-site'; \
+  if [ ! -d '${REMOTE_REPO_DIR}/.git' ]; then \
+    git clone '${REMOTE_REPO_URL}' '${REMOTE_REPO_DIR}'; \
+  fi; \
+  cd '${REMOTE_REPO_DIR}'; \
+  git fetch origin; \
+  git checkout '${BRANCH}'; \
+  git pull --ff-only origin '${BRANCH}'; \
+  bash deploy.sh"
+
+echo "==> Done. Latest commit deployed."
