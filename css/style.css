@@ -689,7 +689,7 @@ img, svg { display: block; }
    GREETING SECTION
    ============================================= */
 .greeting-section {
-  padding: 5rem 0;
+  padding: 2.5rem 0 5rem;
   background: var(--gray-50);
 }
 
