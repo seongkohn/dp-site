@@ -894,16 +894,18 @@ img, svg { display: block; }
 }
 @media (max-width: 639px) {
   .site-footer .footer-inner {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
+    padding-left: calc(1.25rem + env(safe-area-inset-left));
+    padding-right: calc(1.25rem + env(safe-area-inset-right));
   }
 }
 
 .footer-grid {
   display: grid;
   gap: 2.5rem;
+  justify-items: start;
 }
 @media (min-width: 768px) { .footer-grid { grid-template-columns: 1.5fr 1fr 1fr; } }
+.footer-grid > * { min-width: 0; }
 
 .footer-brand {}
 .footer-brand-name {
@@ -931,6 +933,8 @@ img, svg { display: block; }
   font-size: 0.8125rem;
   color: rgba(255,255,255,0.65);
   line-height: 1.85;
+  text-align: left;
+  overflow-wrap: anywhere;
 }
 .footer-col-body a {
   color: rgba(255,255,255,0.65);
@@ -947,9 +951,12 @@ img, svg { display: block; }
 .footer-bottom {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 0.5rem;
   font-size: 0.8125rem;
   color: rgba(255,255,255,0.45);
+  text-align: left;
+  overflow-wrap: anywhere;
 }
 @media (min-width: 640px) {
   .footer-bottom {
