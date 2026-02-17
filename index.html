@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Pathology Service</title>
+  <meta name="description" content="대한병리학회, 대한세포병리학회 및 기관의 디지털 병리 슬라이드 열람 서비스. WSI viewer portal operated by Seongkohn Traders Corp." />
+
+  <!-- Google Fonts: Inter + Noto Sans KR (matches seongkohn-site) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- =============================================
+     HEADER
+     ============================================= -->
+<header class="site-header">
+  <div class="container header-inner">
+
+    <!-- Logo -->
+    <a href="/" class="logo" aria-label="Seongkohn Traders Corp. Home">
+      <img src="images/sk-logo.svg" alt="Seongkohn Traders Corp." class="logo-img" />
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="#greeting">인사말</a>
+      <a href="#how-to-use">사용방법</a>
+      <a href="https://seongkohn.co.kr" target="_blank" rel="noopener noreferrer">회사소개</a>
+    </nav>
+
+    <!-- Actions -->
+    <div class="header-actions">
+      <a href="http://d.digitalpathology.co.kr/Login/Index?ReturnUrl=%2f" target="_blank" rel="noopener noreferrer" class="btn-primary">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/>
+          <polyline points="10 17 15 12 10 7"/>
+          <line x1="15" y1="12" x2="3" y2="12"/>
+        </svg>
+        Login
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="메뉴 열기" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<!-- =============================================
+     MOBILE DRAWER
+     ============================================= -->
+<div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+  <div class="drawer-backdrop"></div>
+  <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <div class="drawer-header">
+      <img src="images/sk-logo.svg" alt="Seongkohn Traders Corp." style="height:32px;width:auto;" />
+      <button class="drawer-close" id="drawerClose" aria-label="메뉴 닫기">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+    <nav class="drawer-nav">
+      <a href="#greeting">인사말</a>
+      <a href="#how-to-use">사용방법</a>
+      <a href="https://seongkohn.co.kr" target="_blank" rel="noopener noreferrer">회사소개</a>
+      <a href="http://d.digitalpathology.co.kr/Login/Index?ReturnUrl=%2f" target="_blank" rel="noopener noreferrer" class="drawer-login">Login</a>
+    </nav>
+  </div>
+</div>
+
+<!-- =============================================
+     HERO
+     ============================================= -->
+<section class="hero">
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="hero-blob hero-blob-1" aria-hidden="true"></div>
+  <div class="hero-blob hero-blob-2" aria-hidden="true"></div>
+
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">WSI Viewer Portal</div>
+
+      <h1 class="hero-title">
+        Digital Pathology<br>
+        <span>Service</span>
+      </h1>
+
+      <p class="hero-sub">
+        소속 학회를 선택하여 WSI 슬라이드를 열람하세요.<br>
+        Select your society to view whole slide images.
+      </p>
+
+      <a href="#services" class="hero-cta">
+        슬라이드 열람하기
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     SERVICES (WSI PLATFORMS)
+     ============================================= -->
+<section class="services-section" id="services">
+  <div class="container">
+    <div class="services-header">
+      <span class="section-badge">WSI Viewers</span>
+      <h2 class="section-heading">WSI 열람 서비스</h2>
+      <p class="section-sub">각 학회 및 기관의 슬라이드 열람 서비스로 이동합니다. 클릭하여 접속하세요.</p>
+    </div>
+
+    <div class="services-grid">
+
+      <!-- Card 1: KSP Monthly -->
+      <a href="http://o.digitalpathology.co.kr/ExternalInterface/viewsimple?INST=INST_A&FA=FAC_A&ENC=SEIydIF5vYsy9DhugSsrwnEHrhnCa0mVfkDoq14hx5Cr1398fuPnfFA1SzA3kZ3S" class="service-card"
+         target="_blank" rel="noopener noreferrer"
+         aria-label="대한병리학회 월례집담회 열람 서비스로 이동">
+        <div class="service-icon" aria-hidden="true">
+          <!-- Microscope icon -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 18h8"/>
+            <path d="M3 21h18"/>
+            <path d="M14 21v-4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v4"/>
+            <path d="M8 7V5a2 2 0 0 1 2-2h4.5L17 5.5V7"/>
+            <path d="M13 21V7"/>
+            <path d="M8 12h6.5"/>
+          </svg>
+        </div>
+        <div class="service-body">
+          <span class="service-category">대한병리학회 · KSP</span>
+          <h3 class="service-title">대한병리학회 월례집담회</h3>
+          <p class="service-title-en">The Korean Society of Pathologists<br>Monthly Slide Conference</p>
+        </div>
+        <div class="service-arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+            <polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </div>
+      </a>
+
+      <!-- Card 2: KSP Sub-study -->
+      <a href="http://o.digitalpathology.co.kr/ExternalInterface/viewsimple?INST=INST_A&FA=FAC_A&ENC=SEIydIF5vYsy9DhugSsrwnEHrhnCa0mVfkDoq14hx5AXIpfLTh1vrmD3zCI7k9Sd" class="service-card"
+         target="_blank" rel="noopener noreferrer"
+         aria-label="대한병리학회 소속 연구회, 지회 집담회 열람 서비스로 이동">
+        <div class="service-icon" aria-hidden="true">
+          <!-- Network/group icon -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="5" r="2"/>
+            <circle cx="5" cy="19" r="2"/>
+            <circle cx="19" cy="19" r="2"/>
+            <path d="M12 7v4"/>
+            <path d="M12 11l-5 6"/>
+            <path d="M12 11l5 6"/>
+          </svg>
+        </div>
+        <div class="service-body">
+          <span class="service-category">대한병리학회 · KSP</span>
+          <h3 class="service-title">대한병리학회 소속 연구회, 지회 집담회</h3>
+          <p class="service-title-en">KSP Sub-study Group &amp; Regional Divisions<br>Slide Conferences</p>
+        </div>
+        <div class="service-arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+            <polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </div>
+      </a>
+
+      <!-- Card 3: Korean Society for Cytopathology -->
+      <a href="http://o.digitalpathology.co.kr/ExternalInterface/viewsimple?INST=INST_A&FA=FAC_A&ENC=SEIydIF5vYsy9DhugSsrwnEHrhnCa0mVfkDoq14hx5Cn6CfnPBCnbHzRiRzm4EQR" class="service-card"
+         target="_blank" rel="noopener noreferrer"
+         aria-label="대한세포병리학회 월례집담회 열람 서비스로 이동">
+        <div class="service-icon" aria-hidden="true">
+          <!-- Cell/biology icon -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="8" cy="8" r="1" fill="currentColor" stroke="none"/>
+            <circle cx="16" cy="9" r="1" fill="currentColor" stroke="none"/>
+            <circle cx="9" cy="16" r="1" fill="currentColor" stroke="none"/>
+          </svg>
+        </div>
+        <div class="service-body">
+          <span class="service-category">대한세포병리학회 · KSCP</span>
+          <h3 class="service-title">대한세포병리학회 월례집담회</h3>
+          <p class="service-title-en">The Korean Society for Cytopathology<br>Monthly Slide Conference</p>
+        </div>
+        <div class="service-arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+            <polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </div>
+      </a>
+
+      <!-- Card 4: Private Hosting -->
+      <a href="http://d.digitalpathology.co.kr/Login/Index?ReturnUrl=%2f" class="service-card"
+         target="_blank" rel="noopener noreferrer"
+         aria-label="비공개 호스팅 로그인 페이지로 이동">
+        <div class="service-icon" aria-hidden="true">
+          <!-- Lock icon -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            <circle cx="12" cy="16" r="1" fill="currentColor" stroke="none"/>
+          </svg>
+        </div>
+        <div class="service-body">
+          <span class="service-category">Private · 비공개</span>
+          <h3 class="service-title">비공개 호스팅</h3>
+          <p class="service-title-en">Private Hosting — Login Required</p>
+        </div>
+        <div class="service-arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+            <polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     FEATURES
+     ============================================= -->
+<section class="features-section" id="features">
+  <div class="container">
+    <div class="features-header">
+      <span class="section-badge">Key Features</span>
+      <h2 class="section-heading">주요 기능</h2>
+    </div>
+
+    <div class="features-grid">
+
+      <div class="feature-card">
+        <div class="feature-icon-wrap" aria-hidden="true">
+          <!-- Scanner/chip icon -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="7" width="20" height="10" rx="2"/>
+            <path d="M6 7V5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2"/>
+            <path d="M14 7V5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2"/>
+            <path d="M6 17v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-2"/>
+            <path d="M14 17v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-2"/>
+            <line x1="9" y1="12" x2="15" y2="12"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Scanned with 3DHistech</h3>
+        <p class="feature-desc">3DHistech 슬라이드 스캐너로 디지털화된 전체 슬라이드 이미지를 제공합니다.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon-wrap" aria-hidden="true">
+          <!-- Share/annotation icon -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="18" cy="5" r="3"/>
+            <circle cx="6" cy="12" r="3"/>
+            <circle cx="18" cy="19" r="3"/>
+            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Share Annotated Area of Interest</h3>
+        <p class="feature-desc">주석이 달린 관심 영역을 링크로 공유할 수 있습니다.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon-wrap" aria-hidden="true">
+          <!-- Magnify/zoom icon -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            <line x1="11" y1="8" x2="11" y2="14"/>
+            <line x1="8" y1="11" x2="14" y2="11"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Free Magnification of Whole Slide Image</h3>
+        <p class="feature-desc">웹 브라우저에서 전체 슬라이드를 자유 배율로 확대·축소하여 열람합니다.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon-wrap" aria-hidden="true">
+          <!-- Shield/server icon -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <polyline points="9 12 11 14 15 10"/>
+          </svg>
+        </div>
+        <h3 class="feature-title">Open &amp; Private Hosting</h3>
+        <p class="feature-desc">학회 공개 집담회부터 기관 내 비공개 열람까지 두 가지 방식으로 운영합니다.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     GREETING / 인사말
+     ============================================= -->
+<section class="greeting-section" id="greeting">
+  <div class="container">
+    <div class="greeting-inner">
+      <span class="section-badge">인사말</span>
+      <h2 class="section-heading">인사말</h2>
+      <div class="greeting-card">
+        <div class="greeting-paragraphs">
+          <p>설레이는 마음으로 디지털 슬라이드 호스팅을 시작하지 어느덧 12년이 지났습니다.</p>
+          <p>완벽한 시스템은 아니었지만 그동안 유용하게 사용되었고 또 디지털병리를 경험하고 확산시키는데 일익을 담당하였다고 생각합니다. 그사이 IT 기술도 진화하여 저희 프로그램의 기반이었던 Adobe Flash Player 도 역사속으로 사라지는가 하면, 국내에서도 호스팅 프로그램을 개발할 수 있는 수준으로 디지털 병리가 성장하였습니다.</p>
+          <p>새 플랫폼은 진정한 '통합뷰어' '웹뷰어' 이면서 컴퓨터, 노트북, 휴대폰, 태블릿 (Android &amp; iOS)등 모든 스마트 통신기기에서 이용할 수 있도록 개발하였습니다. 또한 새로 구축한 서버는 전용망에 직접 연결하여 속도와 동시접속시 발생하던 문제점들을 해결하였습니다.</p>
+          <p>앞으로도 이 사이트가 기술적 진보를 거듭하여 우리나라 디지털 병리의 보급과 발전에 일익을 담당할 수 있도록 노력하겠습니다.</p>
+          <div class="greeting-sign">
+            <p>2021. 1. 1&nbsp;&nbsp;성곤무역주식회사</p>
+            <p>사장/대표이사&nbsp;&nbsp;윤 무 열&nbsp;&nbsp;올림</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     HOW TO USE / 사용방법 — FULL MANUAL
+     ============================================= -->
+<section class="manual-section" id="how-to-use">
+  <div class="container">
+
+    <div class="manual-intro">
+      <span class="section-badge">사용방법</span>
+      <h2 class="section-heading">User Manual <span style="font-size:1rem;font-weight:500;color:var(--gray-400);">Quick Start</span></h2>
+      <p class="section-sub">뷰어의 주요 기능과 사용 방법을 안내합니다.</p>
+    </div>
+
+    <!-- 1. Worklist -->
+    <div class="manual-block">
+      <div class="manual-block-header">
+        <div class="manual-block-number">1</div>
+        <h3 class="manual-block-title">Worklist</h3>
+      </div>
+      <div class="manual-block-body">
+        <div class="manual-screenshot-layout">
+          <img src="https://digitalpathology.co.kr/image/main/sm1.png"
+               alt="Worklist 화면" class="manual-screenshot"
+               loading="lazy" />
+          <div class="manual-features">
+            <div class="manual-feature-item">
+              <div class="manual-feature-num">1</div>
+              <p class="manual-feature-text"><strong>Menu List</strong> : 보고자하는 메뉴를 클릭합니다. 우측에 슬라이드 리스트가 표시됩니다. 클릭한 채로 끌어 메뉴 리스트 크기를 조정할 수 있습니다.</p>
+            </div>
+            <div class="manual-feature-item">
+              <div class="manual-feature-num">2</div>
+              <p class="manual-feature-text"><strong>Search box</strong> : 원하는 검색어 입력 후 Enter키를 누르거나 아이콘을 클릭합니다. 클릭해 메뉴 리스트를 숨기거나 표시할 수 있습니다.</p>
+            </div>
+            <div class="manual-feature-item">
+              <div class="manual-feature-num">3</div>
+              <p class="manual-feature-text"><strong>Image Information</strong> : 슬라이드 이미지에 대한 정보가 표시됩니다. (스캔된 배율, 스캐너 벤더, 스캐너 모델명 등) 슬라이드 스캔 서비스를 이용하는 유저는 해당 버튼을 통해 로그인할 수 있습니다.</p>
+            </div>
+            <div class="manual-feature-item">
+              <div class="manual-feature-num">4</div>
+              <p class="manual-feature-text"><strong>Download</strong> : 버튼을 클릭하여 원본 이미지 파일을 다운 받을 수 있습니다.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Viewer -->
+    <div class="manual-block">
+      <div class="manual-block-header">
+        <div class="manual-block-number">2</div>
+        <h3 class="manual-block-title">Viewer</h3>
+      </div>
+      <div class="manual-block-body">
+        <div class="manual-screenshot-layout">
+          <img src="https://digitalpathology.co.kr/image/main/sm2.png"
+               alt="Viewer 화면" class="manual-screenshot"
+               loading="lazy" />
+          <div class="manual-features">
+            <div class="manual-feature-item">
+              <div class="manual-feature-num">1</div>
+              <p class="manual-feature-text"><strong>Toolbar</strong> : 다양한 기능을 사용할 수 있습니다. (Toolbar 항목 참조)</p>
+            </div>
+            <div class="manual-feature-item">
+              <div class="manual-feature-num">2</div>
+              <p class="manual-feature-text"><strong>Zoom button</strong> : 버튼을 클릭해 원하는 배율로 확대/축소할 수 있습니다. 클릭해 숨기거나 표시할 수 있습니다.</p>
+            </div>
+            <div class="manual-feature-item">
+              <div class="manual-feature-num">3</div>
+              <p class="manual-feature-text"><strong>Label Layer</strong> : 슬라이드 라벨을 확인할 수 있습니다. 클릭하여 90도씩 회전할 수 있습니다. 클릭한 채로 좌/우로 끌어 위치를 이동할 수 있습니다.</p>
+            </div>
+            <div class="manual-feature-item">
+              <div class="manual-feature-num">4</div>
+              <p class="manual-feature-text"><strong>Magnifier</strong> : 클릭한 상태에서 확대하고자 하는 위치로 끌어 현재 배율의 2배로 확대해서 볼 수 있습니다.</p>
+            </div>
+            <div class="manual-feature-item">
+              <div class="manual-feature-num">5</div>
+              <p class="manual-feature-text"><strong>Scalebar</strong> : 뷰어 영역의 실측 길이와 면적을 표시합니다.</p>
+            </div>
+            <div class="manual-feature-item">
+              <div class="manual-feature-num">6</div>
+              <p class="manual-feature-text"><strong>Thumbnail map</strong> : 현재 영역을 가이드라인으로 표시해주며 마우스 클릭을 통해 원하는 위치로 빠르게 이동할 수 있습니다.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. 슬라이드 탐색 방법 -->
+    <div class="manual-block">
+      <div class="manual-block-header">
+        <div class="manual-block-number">3</div>
+        <h3 class="manual-block-title">슬라이드 탐색 방법</h3>
+      </div>
+      <div class="manual-block-body">
+
+        <div class="manual-sub-block">
+          <div class="manual-sub-heading">슬라이드 이동 (Pan)</div>
+          <div class="manual-steps-grid">
+            <div class="manual-step-item">
+              <img src="https://digitalpathology.co.kr/image/main/am1.jpg"
+                   alt="마우스 이동" class="manual-step-img" loading="lazy" />
+              <p class="manual-step-caption">마우스를 클릭한 상태로 끌면서 탐색할 수 있습니다.</p>
+            </div>
+            <div class="manual-step-item">
+              <img src="https://digitalpathology.co.kr/image/main/am2.jpg"
+                   alt="Auto pan" class="manual-step-img" loading="lazy" />
+              <p class="manual-step-caption">마우스 휠을 누르거나 우클릭 후 autopan 메뉴를 클릭합니다. ESC 또는 Selector 버튼으로 중지합니다.</p>
+            </div>
+            <div class="manual-step-item">
+              <img src="https://digitalpathology.co.kr/image/main/am3.jpg"
+                   alt="Thumbnail map 이동" class="manual-step-img" loading="lazy" />
+              <p class="manual-step-caption">Thumbnail map에서 마우스 클릭을 통해 원하는 위치로 빠르게 이동할 수 있습니다.</p>
+            </div>
+          </div>
+          <div class="manual-feature-item" style="margin-top:1rem;">
+            <div class="manual-feature-num">4</div>
+            <p class="manual-feature-text">키보드 방향키를 통해 위치를 이동할 수 있습니다.</p>
+          </div>
+        </div>
+
+        <div class="manual-sub-block">
+          <div class="manual-sub-heading">슬라이드 확대/축소 (Zoom)</div>
+          <div class="manual-steps-grid">
+            <div class="manual-step-item">
+              <img src="https://digitalpathology.co.kr/image/main/am4.jpg"
+                   alt="마우스 휠 확대" class="manual-step-img" loading="lazy" />
+              <p class="manual-step-caption">마우스 휠 또는 더블클릭하여 확대/축소할 수 있습니다.</p>
+            </div>
+            <div class="manual-step-item">
+              <img src="https://digitalpathology.co.kr/image/main/am5.jpg"
+                   alt="Zoom 버튼" class="manual-step-img" loading="lazy" />
+              <p class="manual-step-caption">Zoom 버튼 클릭 및 키보드 숫자키를 입력하여 원하는 배율로 빠르게 이동할 수 있습니다.</p>
+            </div>
+            <div class="manual-step-item">
+              <img src="https://digitalpathology.co.kr/image/main/am6.jpg"
+                   alt="배율 선택" class="manual-step-img" loading="lazy" />
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 4. Toolbar -->
+    <div class="manual-block">
+      <div class="manual-block-header">
+        <div class="manual-block-number">4</div>
+        <h3 class="manual-block-title">Toolbar</h3>
+      </div>
+      <div class="manual-block-body">
+        <img src="https://digitalpathology.co.kr/image/main/sm3.png"
+             alt="Toolbar 화면" class="manual-screenshot"
+             style="max-width:600px;margin-bottom:1.5rem;" loading="lazy" />
+        <div class="manual-toolbar-list">
+          <div class="manual-feature-item">
+            <div class="manual-feature-num">1</div>
+            <p class="manual-feature-text"><strong>Full view mode</strong> — 전체화면 모드를 사용할 수 있습니다.</p>
+          </div>
+          <div class="manual-feature-item">
+            <div class="manual-feature-num">2</div>
+            <p class="manual-feature-text"><strong>Show/Hide Scale bar</strong> — Scale bar를 숨김/표시할 수 있습니다.</p>
+          </div>
+          <div class="manual-feature-item">
+            <div class="manual-feature-num">3</div>
+            <p class="manual-feature-text"><strong>Show/Hide Label layer</strong> — Label layer를 숨김/표시할 수 있습니다.</p>
+          </div>
+          <div class="manual-feature-item">
+            <div class="manual-feature-num">4</div>
+            <p class="manual-feature-text"><strong>Show/Hide Magnifier layer</strong> — Magnifier layer를 숨김/표시할 수 있습니다.</p>
+          </div>
+          <div class="manual-feature-item">
+            <div class="manual-feature-num">5</div>
+            <p class="manual-feature-text"><strong>Show/Hide Thumbnail Map</strong> — Thumbnail map layer를 숨김/표시할 수 있습니다.</p>
+          </div>
+          <div class="manual-feature-item">
+            <div class="manual-feature-num">6</div>
+            <p class="manual-feature-text"><strong>Selector</strong> — 슬라이드 이미지를 이동하며 탐색할 수 있는 모드입니다.</p>
+          </div>
+          <div class="manual-feature-item">
+            <div class="manual-feature-num">7</div>
+            <p class="manual-feature-text"><strong>Rotate</strong> — 다양한 옵션으로 슬라이드 이미지를 회전시킬 수 있습니다.</p>
+          </div>
+          <div class="manual-feature-item">
+            <div class="manual-feature-num">8</div>
+            <p class="manual-feature-text"><strong>Show/Hide Annotation</strong> — 뷰어 영역 안의 Annotation들을 숨김/표시할 수 있습니다.</p>
+          </div>
+          <div class="manual-feature-item">
+            <div class="manual-feature-num">9</div>
+            <p class="manual-feature-text"><strong>Annotation</strong> — 다양한 Annotation을 추가할 수 있습니다.</p>
+          </div>
+          <div class="manual-feature-item">
+            <div class="manual-feature-num">10</div>
+            <p class="manual-feature-text"><strong>Measurement</strong> — 실제 길이 또는 면적을 측정할 수 있습니다.</p>
+          </div>
+          <div class="manual-feature-item">
+            <div class="manual-feature-num">11</div>
+            <p class="manual-feature-text"><strong>Copy to Clipboard</strong> — 현재 보고 있는 슬라이드 이미지를 클립보드에 저장합니다.</p>
+          </div>
+          <div class="manual-feature-item">
+            <div class="manual-feature-num">12</div>
+            <p class="manual-feature-text"><strong>Image properties</strong> — 슬라이드 이미지의 밝기&amp;대비, 색상 균형, 감마 값을 변경할 수 있습니다.</p>
+          </div>
+          <div class="manual-feature-item">
+            <div class="manual-feature-num">13</div>
+            <p class="manual-feature-text"><strong>Image Information</strong> — 슬라이드 이미지의 정보, 매크로 및 썸네일 이미지를 확인할 수 있습니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. Annotation & Measurement -->
+    <div class="manual-block">
+      <div class="manual-block-header">
+        <div class="manual-block-number">5</div>
+        <h3 class="manual-block-title">Annotation 및 Measurement <span>사용방법</span></h3>
+      </div>
+      <div class="manual-block-body">
+
+        <!-- 추가 -->
+        <div class="manual-sub-block">
+          <div class="manual-sub-heading">Annotation / Measurement 추가</div>
+          <div class="manual-steps-grid">
+            <div class="manual-step-item">
+              <img src="https://digitalpathology.co.kr/image/main/as1.jpg"
+                   alt="Annotation 추가 1" class="manual-step-img" loading="lazy" />
+              <p class="manual-step-caption">① 원하는 유형을 클릭합니다.</p>
+            </div>
+            <div class="manual-step-item">
+              <img src="https://digitalpathology.co.kr/image/main/as2.jpg"
+                   alt="Annotation 추가 2" class="manual-step-img" loading="lazy" />
+              <p class="manual-step-caption">② 원하는 영역에 마우스를 클릭한 상태로 끌어 추가합니다. 마우스에서 손을 떼면 속성창이 나타납니다.</p>
+            </div>
+            <div class="manual-step-item" style="display:flex;flex-direction:column;justify-content:flex-start;gap:0.75rem;">
+              <p class="manual-step-caption" style="background:var(--brand-pale);padding:0.75rem;border-radius:var(--r-md);font-size:0.8125rem;color:var(--gray-700);">③ 제목, 설명, 색 및 두께 등을 설정한 후 [OK] 버튼을 클릭합니다.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 편집/선택/삭제 -->
+        <div class="manual-sub-block">
+          <div class="manual-sub-heading">Annotation / Measurement 편집 / 선택 / 삭제</div>
+          <div class="manual-steps-grid">
+            <div class="manual-step-item">
+              <img src="https://digitalpathology.co.kr/image/main/as3.jpg"
+                   alt="Annotation 편집 1" class="manual-step-img" loading="lazy" />
+              <p class="manual-step-caption">① 원하는 Annotation을 클릭해 선택합니다.</p>
+            </div>
+            <div class="manual-step-item">
+              <img src="https://digitalpathology.co.kr/image/main/as4.jpg"
+                   alt="Annotation 편집 2" class="manual-step-img" loading="lazy" />
+              <p class="manual-step-caption">② 선택된 상태에서 마우스 우클릭합니다. 속성 변경, 삭제, 크기 조정이 가능합니다.</p>
+            </div>
+            <div class="manual-step-item" style="display:flex;flex-direction:column;justify-content:flex-start;gap:0.5rem;">
+              <p class="manual-step-caption" style="background:var(--brand-pale);padding:0.75rem;border-radius:var(--r-md);font-size:0.8125rem;color:var(--gray-700);">모두 삭제: 뷰어 영역에서 마우스 우클릭 후 <strong>Delete all annotation</strong> 메뉴를 클릭하면 모든 Annotation/Measurement를 삭제합니다.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 복사/잘라내기 -->
+        <div class="manual-sub-block">
+          <div class="manual-sub-heading">Annotation / Measurement 복사 / 잘라내기</div>
+          <div class="manual-steps-grid">
+            <div class="manual-step-item">
+              <img src="https://digitalpathology.co.kr/image/main/as5.jpg"
+                   alt="Annotation 복사" class="manual-step-img" loading="lazy" />
+              <p class="manual-step-caption"><strong>복사</strong>: 원하는 Annotation을 선택 → 우클릭 → 복사 → 붙여넣기 할 위치로 이동 후 클릭. (단축키: Ctrl+C / Ctrl+V)</p>
+            </div>
+            <div class="manual-step-item">
+              <img src="https://digitalpathology.co.kr/image/main/as6.jpg"
+                   alt="Annotation 잘라내기" class="manual-step-img" loading="lazy" />
+              <p class="manual-step-caption"><strong>잘라내기</strong>: 원하는 Annotation을 선택 → 우클릭 → 잘라내기 → 붙여넣기 위치에서 우클릭 → Paste annotation. (단축키: Ctrl+X / Ctrl+V)</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- =============================================
+     FOOTER
+     ============================================= -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-grid">
+
+      <!-- Brand -->
+      <div class="footer-brand">
+        <div class="footer-brand-name">Digital Pathology Service</div>
+        <div class="footer-brand-sub">
+          WSI viewer portal operated by<br>
+          성곤무역(주) Seongkohn Traders Corp.
+        </div>
+        <div class="footer-brand-sub" style="margin-top:1rem;">
+          <a href="https://seongkohn.co.kr" target="_blank" rel="noopener noreferrer"
+             style="color:rgba(255,255,255,0.55);transition:color .15s;"
+             onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">
+            seongkohn.co.kr ↗
+          </a>
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <div class="footer-col-label">연락처 · Contact</div>
+        <div class="footer-col-body">
+          <div>서울특별시 강남구 학동로50길 38 (논현동)</div>
+          <div>Tel: 02-540-3311</div>
+          <div>Fax: 02-540-6333</div>
+        </div>
+      </div>
+
+      <!-- Services Links -->
+      <div>
+        <div class="footer-col-label">WSI 뷰어</div>
+        <div class="footer-col-body">
+          <a href="http://o.digitalpathology.co.kr/ExternalInterface/viewsimple?INST=INST_A&FA=FAC_A&ENC=SEIydIF5vYsy9DhugSsrwnEHrhnCa0mVfkDoq14hx5Cr1398fuPnfFA1SzA3kZ3S" target="_blank" rel="noopener noreferrer" style="display:block;">대한병리학회 월례집담회</a>
+          <a href="http://o.digitalpathology.co.kr/ExternalInterface/viewsimple?INST=INST_A&FA=FAC_A&ENC=SEIydIF5vYsy9DhugSsrwnEHrhnCa0mVfkDoq14hx5AXIpfLTh1vrmD3zCI7k9Sd" target="_blank" rel="noopener noreferrer" style="display:block;">대한병리학회 연구회·지회</a>
+          <a href="http://o.digitalpathology.co.kr/ExternalInterface/viewsimple?INST=INST_A&FA=FAC_A&ENC=SEIydIF5vYsy9DhugSsrwnEHrhnCa0mVfkDoq14hx5Cn6CfnPBCnbHzRiRzm4EQR" target="_blank" rel="noopener noreferrer" style="display:block;">대한세포병리학회 월례집담회</a>
+          <a href="http://d.digitalpathology.co.kr/Login/Index?ReturnUrl=%2f" target="_blank" rel="noopener noreferrer" style="display:block;">비공개 호스팅 (Login)</a>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="footer-divider" />
+
+    <div class="footer-bottom">
+      <p>운영자 : 성곤무역(주)</p>
+      <p>Copyright &copy; 2025 Seongkohn Traders Corp. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Scroll to top -->
+<button class="scroll-top" id="scrollTop" aria-label="페이지 맨 위로 이동">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <polyline points="18 15 12 9 6 15"/>
+  </svg>
+</button>
+
+<script src="js/main.js"></script>
+</body>
+</html>
