@@ -691,7 +691,7 @@ img, svg { display: block; }
    ============================================= */
 .greeting-section {
   padding: 2.5rem 0 5rem;
-  background: var(--gray-50);
+  background: #fff;
 }
 
 .greeting-inner {
@@ -701,7 +701,7 @@ img, svg { display: block; }
 
 .greeting-card {
   margin-top: 1.75rem;
-  background: #fff;
+  background: var(--gray-50);
   border-radius: var(--r-lg);
   border: 1px solid var(--gray-200);
   border-left: 3px solid var(--brand-purple);

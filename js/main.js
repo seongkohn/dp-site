@@ -32,8 +32,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---- Popup notice dismiss ---- */
   const popupNotice = document.getElementById('popupNotice');
+  if (localStorage.getItem('popupNoticeDismissed')) {
+    popupNotice?.classList.add('hidden');
+  }
   document.getElementById('popupNoticeClose')?.addEventListener('click', () => {
     popupNotice?.classList.add('hidden');
+    localStorage.setItem('popupNoticeDismissed', '1');
   });
 
   /* ---- Scroll-to-top button ---- */
