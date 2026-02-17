@@ -880,12 +880,23 @@ img, svg { display: block; }
    FOOTER
    ============================================= */
 .site-footer {
-  background: linear-gradient(135deg, #353360 0%, #353360 70%, #85253B 100%);
+  background-color: #272641;
+  background-image:
+    radial-gradient(126% 116% at 8% -6%, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0) 58%),
+    radial-gradient(116% 122% at 92% 8%, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 62%),
+    linear-gradient(135deg, #25243d 0%, #43416b 47%, #8b4d66 100%);
+  background-blend-mode: screen, screen, normal;
   color: #fff;
 }
 
 .footer-inner {
   padding: 3rem 0 2rem;
+}
+@media (max-width: 639px) {
+  .site-footer .footer-inner {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
 }
 
 .footer-grid {
