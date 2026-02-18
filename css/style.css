@@ -543,7 +543,8 @@ img, svg { display: block; }
   background: var(--brand-purple);
   color: #fff;
 }
-.service-icon svg { width: 26px; height: 26px; }
+.service-icon svg,
+.service-icon img { width: 26px; height: 26px; }
 
 .service-icon--logo {
   background: #fff;
@@ -556,8 +557,10 @@ img, svg { display: block; }
 }
 .service-logo {
   display: block;
-  width: 100%;
-  height: 100%;
+  width: 76%;
+  height: 76%;
+  max-width: 34px;
+  max-height: 34px;
   object-fit: contain;
 }
 
