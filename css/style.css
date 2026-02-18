@@ -618,9 +618,12 @@ img, svg { display: block; }
 }
 .popup-notice-close {
   flex-shrink: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
   color: #92400e;
   opacity: 0.55;
-  padding: 0.25rem;
+  padding: 0.5rem;
   line-height: 0;
   border-radius: var(--r-sm);
   transition: opacity 0.15s;
