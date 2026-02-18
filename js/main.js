@@ -3,6 +3,22 @@
    ============================================= */
 
 document.addEventListener('DOMContentLoaded', () => {
+  const safeStorage = {
+    get(key) {
+      try {
+        return window.localStorage.getItem(key);
+      } catch (_err) {
+        return null;
+      }
+    },
+    set(key, value) {
+      try {
+        window.localStorage.setItem(key, value);
+      } catch (_err) {
+        // Ignore when storage is disabled by browser privacy settings.
+      }
+    }
+  };
 
   /* ---- Mobile Menu ---- */
   const toggle   = document.getElementById('menuToggle');
@@ -32,12 +48,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---- Popup notice dismiss ---- */
   const popupNotice = document.getElementById('popupNotice');
-  if (localStorage.getItem('popupNoticeDismissed')) {
+  const dismissPopupNotice = () => {
+    popupNotice?.classList.add('hidden');
+    safeStorage.set('popupNoticeDismissed', '1');
+  };
+
+  if (safeStorage.get('popupNoticeDismissed') === '1') {
     popupNotice?.classList.add('hidden');
   }
-  document.getElementById('popupNoticeClose')?.addEventListener('click', () => {
-    popupNotice?.classList.add('hidden');
-    localStorage.setItem('popupNoticeDismissed', '1');
+  const popupNoticeCloseBtn = document.getElementById('popupNoticeClose');
+  ['click', 'touchend'].forEach(evt => {
+    popupNoticeCloseBtn?.addEventListener(evt, (e) => {
+      e.preventDefault();
+      dismissPopupNotice();
+    }, { passive: false });
   });
 
   /* ---- Scroll-to-top button ---- */

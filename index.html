@@ -123,7 +123,8 @@
       <line x1="12" y1="18" x2="12.01" y2="18"/>
     </svg>
     <p>WSI가 보이지 않으면 팝업 창을 허용해 주세요.</p>
-    <button class="popup-notice-close" id="popupNoticeClose" aria-label="알림 닫기">
+    <button class="popup-notice-close" id="popupNoticeClose" type="button" aria-label="알림 닫기"
+            onclick="var n=document.getElementById('popupNotice');if(n){n.classList.add('hidden');}">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true">
         <line x1="18" y1="6" x2="6" y2="18"/>
         <line x1="6" y1="6" x2="18" y2="18"/>
@@ -664,6 +665,6 @@
   </svg>
 </button>
 
-<script src="js/main.js"></script>
+<script src="js/main.js?v=20260218a"></script>
 </body>
 </html>
