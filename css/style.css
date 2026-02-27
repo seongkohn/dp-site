@@ -269,7 +269,9 @@ img, svg { display: block; }
   );
   background-size: 400% 400%;
   animation: hero-bg-shift 22s ease-in-out infinite;
-  padding: 1.1rem 0 1.4rem;
+  padding: 5.9rem 0 5.9rem;
+  display: flex;
+  align-items: center;
 }
 
 @keyframes hero-bg-shift {
@@ -430,7 +432,7 @@ img, svg { display: block; }
   font-size: 0.9375rem;
   line-height: 1.75;
   color: rgba(255,255,255,0.70);
-  margin-bottom: 2rem;
+  margin-bottom: 0;
 }
 
 .hero-cta {
