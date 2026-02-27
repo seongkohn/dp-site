@@ -269,7 +269,7 @@ img, svg { display: block; }
   );
   background-size: 400% 400%;
   animation: hero-bg-shift 22s ease-in-out infinite;
-  padding: 5.9rem 0 5.9rem;
+  padding: 4.5rem 0 4.5rem;
   display: flex;
   align-items: center;
 }
@@ -485,7 +485,7 @@ img, svg { display: block; }
    SERVICES SECTION
    ============================================= */
 .services-section {
-  padding: 5rem 0;
+  padding: 2.5rem 0;
   background: var(--gray-50);
 }
 
