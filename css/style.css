@@ -106,6 +106,10 @@ img, svg { display: block; }
   background: var(--brand-pale);
   color: var(--brand-purple);
 }
+.site-nav a.nav-active {
+  background: var(--brand-pale);
+  color: var(--brand-purple);
+}
 
 /* Header actions */
 .header-actions {
@@ -265,7 +269,7 @@ img, svg { display: block; }
   );
   background-size: 400% 400%;
   animation: hero-bg-shift 22s ease-in-out infinite;
-  padding: 3.5rem 0 4rem;
+  padding: 2rem 0 2.5rem;
 }
 
 @keyframes hero-bg-shift {

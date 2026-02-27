@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>인사말 | 성곤무역(주) 디지털 병리 서비스</title>
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <meta name="description" content="성곤무역(주) 디지털 병리 서비스 인사말." />
+
+  <!-- Google Fonts: Inter + Noto Sans KR (matches seongkohn-site) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css?v=20260218a" />
+</head>
+<body>
+
+<!-- =============================================
+     HEADER
+     ============================================= -->
+<header class="site-header">
+  <div class="container header-inner">
+
+    <!-- Logo -->
+    <a href="/" class="logo" aria-label="Seongkohn Traders Corp. Home">
+      <img src="images/sk-logo.svg" alt="Seongkohn Traders Corp." class="logo-img" />
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html#services">슬라이드</a>
+      <a href="how-to-use.html">사용방법</a>
+      <a href="greeting.html" class="nav-active">인사말</a>
+    </nav>
+
+    <!-- Actions -->
+    <div class="header-actions">
+      <a href="https://test.seongkohn.com" target="_blank" rel="noopener noreferrer" class="btn-primary">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+          <polyline points="15 3 21 3 21 9"/>
+          <line x1="10" y1="14" x2="21" y2="3"/>
+        </svg>
+        홈페이지
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="메뉴 열기" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<!-- =============================================
+     MOBILE DRAWER
+     ============================================= -->
+<div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+  <div class="drawer-backdrop"></div>
+  <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <div class="drawer-header">
+      <img src="images/sk-logo.svg" alt="Seongkohn Traders Corp." style="height:32px;width:auto;" />
+      <button class="drawer-close" id="drawerClose" aria-label="메뉴 닫기">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+    <nav class="drawer-nav">
+      <a href="index.html#services">슬라이드</a>
+      <a href="how-to-use.html">사용방법</a>
+      <a href="greeting.html">인사말</a>
+      <a href="https://test.seongkohn.com" target="_blank" rel="noopener noreferrer" class="drawer-login">홈페이지</a>
+    </nav>
+  </div>
+</div>
+
+<!-- =============================================
+     GREETING / 인사말
+     ============================================= -->
+<section class="greeting-section" id="greeting">
+  <div class="container">
+    <div class="greeting-inner">
+      <span class="section-badge">Introduction</span>
+      <h2 class="section-heading">인사말</h2>
+      <div class="greeting-card">
+        <div class="greeting-paragraphs">
+          <p>설레이는 마음으로 디지털 슬라이드 호스팅을 시작하지 어느덧 12년이 지났습니다.</p>
+          <p>완벽한 시스템은 아니었지만 그동안 유용하게 사용되었고 또 디지털병리를 경험하고 확산시키는데 일익을 담당하였다고 생각합니다. 그사이 IT 기술도 진화하여 저희 프로그램의 기반이었던 Adobe Flash Player 도 역사속으로 사라지는가 하면, 국내에서도 호스팅 프로그램을 개발할 수 있는 수준으로 디지털 병리가 성장하였습니다.</p>
+          <p>새 플랫폼은 진정한 '통합뷰어' '웹뷰어' 이면서 컴퓨터, 노트북, 휴대폰, 태블릿 (Android &amp; iOS)등 모든 스마트 통신기기에서 이용할 수 있도록 개발하였습니다. 또한 새로 구축한 서버는 전용망에 직접 연결하여 속도와 동시접속시 발생하던 문제점들을 해결하였습니다.</p>
+          <p>앞으로도 이 사이트가 기술적 진보를 거듭하여 우리나라 디지털 병리의 보급과 발전에 일익을 담당할 수 있도록 노력하겠습니다.</p>
+          <div class="greeting-sign">
+            <p>2021. 1. 1&nbsp;&nbsp;성곤무역주식회사</p>
+            <p>대표이사&nbsp;&nbsp;윤 무 열&nbsp;&nbsp;올림</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     FOOTER
+     ============================================= -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-grid">
+
+      <!-- Brand -->
+      <div class="footer-brand">
+        <div class="footer-brand-name">Digital Pathology Service</div>
+        <div class="footer-brand-sub">
+          성곤무역(주) | 디지털 병리 서비스
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <div class="footer-col-label">연락처 · Contact</div>
+        <div class="footer-col-body">
+          <div>서울특별시 강남구 학동로50길 38 (논현동)</div>
+          <div>Tel: 02-540-3311</div>
+          <div>Fax: 02-540-6333</div>
+        </div>
+      </div>
+
+      <!-- Services Links -->
+      <div>
+        <div class="footer-col-label">WSI 뷰어</div>
+        <div class="footer-col-body">
+          <a href="http://o.digitalpathology.co.kr/ExternalInterface/viewsimple?INST=INST_A&FA=FAC_A&ENC=SEIydIF5vYsy9DhugSsrwnEHrhnCa0mVfkDoq14hx5Cr1398fuPnfFA1SzA3kZ3S" target="_blank" rel="noopener noreferrer" style="display:block;">대한병리학회 월례집담회</a>
+          <a href="http://o.digitalpathology.co.kr/ExternalInterface/viewsimple?INST=INST_A&FA=FAC_A&ENC=SEIydIF5vYsy9DhugSsrwnEHrhnCa0mVfkDoq14hx5AXIpfLTh1vrmD3zCI7k9Sd" target="_blank" rel="noopener noreferrer" style="display:block;">대한병리학회 연구회·지회</a>
+          <a href="http://o.digitalpathology.co.kr/ExternalInterface/viewsimple?INST=INST_A&FA=FAC_A&ENC=SEIydIF5vYsy9DhugSsrwnEHrhnCa0mVfkDoq14hx5Cn6CfnPBCnbHzRiRzm4EQR" target="_blank" rel="noopener noreferrer" style="display:block;">대한세포병리학회 월례집담회</a>
+          <a href="http://d.digitalpathology.co.kr/Login/Index?ReturnUrl=%2f" target="_blank" rel="noopener noreferrer" style="display:block;">비공개 호스팅 (Login)</a>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="footer-divider" />
+
+    <div class="footer-bottom" style="display:flex;justify-content:space-between;align-items:center;">
+      <a href="https://seongkohn.com" target="_blank" rel="noopener noreferrer"
+         style="color:rgba(255,255,255,0.55);transition:color .15s;"
+         onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">
+        seongkohn.com ↗
+      </a>
+      <p style="margin:0;">Copyright &copy; 2026 Seongkohn Traders Corp. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Scroll to top -->
+<button class="scroll-top" id="scrollTop" aria-label="페이지 맨 위로 이동">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <polyline points="18 15 12 9 6 15"/>
+  </svg>
+</button>
+
+<script src="js/main.js?v=20260218a"></script>
+</body>
+</html>
