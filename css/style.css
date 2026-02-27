@@ -269,7 +269,7 @@ img, svg { display: block; }
   );
   background-size: 400% 400%;
   animation: hero-bg-shift 22s ease-in-out infinite;
-  padding: 2rem 0 2.5rem;
+  padding: 1.6rem 0 2rem;
 }
 
 @keyframes hero-bg-shift {
